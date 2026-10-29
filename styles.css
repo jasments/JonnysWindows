@@ -14,3 +14,42 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 /* Allow editorial headings to wrap naturally on narrower desktop panels. */
 .coastal-band-content h2{white-space:normal;font-size:clamp(49px,4.2vw,67px)}
+
+.contact-details {
+  margin-top: 45px;
+}
+
+.contact-item {
+  margin-bottom: 30px;
+}
+
+.contact-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #d8c19e;
+  margin-bottom: 12px;
+}
+
+.contact-item a {
+  display: inline-block;
+  font-size: 17px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #d8c19e;
+}
+
+/* Fix footer logo proportions */
+.footer-logo img {
+  width: 240px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
