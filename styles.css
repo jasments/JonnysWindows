@@ -51,5 +51,293 @@
   max-width: 100%;
   object-fit: contain;
 }
+/* Keep decorative symbols as text, not emojis */
 
+.small-gold-star,
+.reassurance-number {
+  font-family: Georgia, "Times New Roman", serif;
+  font-variant-emoji: text;
+  font-style: normal;
+}
 
+/* Prevent decorative stars appearing as emoji badges */
+.small-gold-star {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Force text-style arrows on iPhone */
+.service-arrow,
+.text-arrow {
+  font-family: Georgia, "Times New Roman", serif;
+  font-variant-emoji: text;
+  font-style: normal;
+}
+.text-arrow {
+  font-family: Georgia, "Times New Roman", serif;
+  font-variant-emoji: text;
+  font-style: normal;
+  font-weight: 400;
+  color: inherit;
+}
+.header-cta .icon-arrow {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+  flex-shrink: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* =================================
+   CLEAN SVG ICONS - NO EMOJIS
+   ================================= */
+
+.icon-arrow {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.icon-star {
+  width: 22px;
+  height: 22px;
+  display: block;
+  color: #b59b70;
+}
+
+/* Remove any unwanted emoji badge styling */
+.small-gold-star {
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 0;
+}
+
+/* Header arrow */
+.header-cta .icon-arrow {
+  width: 17px;
+  height: 17px;
+  margin-left: 6px;
+}
+
+/* Services arrows */
+.service-arrow .icon-arrow {
+  width: 24px;
+  height: 24px;
+}
+
+/* General text links */
+.text-link .icon-arrow {
+  width: 17px;
+  height: 17px;
+  margin-left: 6px;
+}
+
+/* RESTORE GOLD STAR ON HERO IMAGE */
+
+.hero-image-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-image-note .small-gold-star {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  position: static !important;
+  width: 28px !important;
+  height: 28px !important;
+  flex: 0 0 28px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin: 0;
+}
+
+.hero-image-note .icon-star {
+  display: block !important;
+  width: 24px !important;
+  height: 24px !important;
+  color: #b59b70;
+  stroke: currentColor;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Phone number replaces GET A FREE QUOTE on iPhones and iPad mini. */
+.header-phone {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  /* Keep one clean header row: logo | telephone | menu. */
+  .header-cta {
+    display: none;
+  }
+
+  .header-phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 10px 0 9px;
+    border-bottom: 1px solid var(--ink);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: clamp(11px, 2.6vw, 13px);
+    font-weight: 700;
+    letter-spacing: .035em;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .header-inner {
+    gap: clamp(9px, 2.5vw, 24px);
+  }
+
+  /* iPad mini landscape uses the same compact navigation. */
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 24px 24px 34px;
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 20px 32px rgba(10, 30, 40, .08);
+  }
+
+  .main-nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav > a {
+    display: block;
+    font-size: 12px !important;
+    padding: 14px 0 !important;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .main-nav > a::after {
+    display: none;
+  }
+
+  .mobile-nav-cta {
+    display: block !important;
+    margin-top: 5px;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    width: 31px;
+    height: 31px;
+    flex: 0 0 31px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--ink);
+    transition: transform .25s, opacity .25s;
+  }
+
+  .menu-toggle[aria-expanded=true] span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded=true] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded=true] span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 375px) {
+  .brand {
+    width: 122px;
+    min-width: 122px;
+  }
+}
+
+/* Fix stretched footer logo */
+.footer-brand {
+  display: block;
+  width: 230px;
+  max-width: 100%;
+}
+
+.footer-brand img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-height: none;
+  object-fit: contain;
+}
+
+/* Mobile and iPad */
+@media (max-width: 800px) {
+  .footer-brand {
+    width: 190px;
+  }
+}
+
+/* FOOTER LOGO - FIX PROPORTIONS */
+
+.site-footer .footer-brand {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto !important;
+  align-self: start;
+  justify-self: start;
+}
+
+.site-footer .footer-brand img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: 507 / 201;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* iPhone and iPad Mini */
+@media (max-width: 1024px) {
+  .site-footer .footer-brand {
+    width: 250px;
+    max-width: 100%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
