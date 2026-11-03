@@ -342,3 +342,96 @@ html {
   }
 }
 
+
+/* ========================================
+   CENTRED FOOTER — COPYRIGHT & CREDITS
+   ======================================== */
+
+.site-footer .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #31485a;
+  padding: 19px 0 0;
+}
+
+.footer-back-top {
+  color: #bec9c9;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.site-footer .footer-credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0;
+  padding: 18px 20px 24px;
+  text-align: center;
+  color: #aab7bb;
+}
+
+.footer-credit-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 9px;
+  row-gap: 3px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  line-height: 1.6;
+}
+
+.credit-dot {
+  color: #bc9b6a;
+}
+
+.footer-designer {
+  font-size: 12px;
+  letter-spacing: 0.035em;
+  line-height: 1.7;
+}
+
+.footer-designer a {
+  color: #edf0ed;
+  font-weight: 500;
+}
+
+.site-footer .footer-credits a,
+.footer-back-top {
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.site-footer .footer-credits a:hover,
+.footer-back-top:hover {
+  color: #d5bea0;
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .site-footer .footer-credits {
+    padding: 18px 14px 24px;
+    gap: 6px;
+  }
+
+  .footer-credit-line {
+    font-size: 9px;
+    letter-spacing: 0.025em;
+    column-gap: 5px;
+  }
+
+  .footer-designer {
+    font-size: 11px;
+  }
+
+  .footer-back-top {
+    font-size: 9px;
+  }
+}
+
